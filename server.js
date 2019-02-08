@@ -31,9 +31,9 @@ app.listen(process.env.PORT || 8080, () => {
 
 // This should not be here anymore, but leaving incase of future
 // updates to course that changes it.
-// app.get('/', (req, res) => {
-//     res.send(database.users);
-// });
+app.get('/', (req, res) => {
+    res.send('it is working');
+});
 
 // can move arrow functions to inside the controller
 app.put('/image', image.handleImagePut(db))
