@@ -25,8 +25,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.listen(8080, () => {
-    console.log("Listening..");
+app.listen(process.env.PORT || 8080, () => {
+    console.log(`Listening on port ${process.env.port}` );
 });
 
 // This should not be here anymore, but leaving incase of future
